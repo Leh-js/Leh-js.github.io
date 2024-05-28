@@ -18,4 +18,4 @@ console.log("Hello, World!");
 
 ![Static Badge](https://img.shields.io/badge/Esbuild-black?style=flat-square&logo=gihub&link=https://github.com/evanw/esbuild)
 ![Static Badge](https://img.shields.io/badge/Node-black?style=flat-square&logo=gihub&link=https://github.com/nodejs/node)
-![Static Badge](https://img.shields.io/badge/Leh.js-black?style=flat-square&logo=gihub&link=(https://formernetlifyuser.neocities.org/cli))
+![Static Badge](https://img.shields.io/badge/Leh.js-black?style=flat-square&logo=gihub&link=https://formernetlifyuser.neocities.org/cli)
