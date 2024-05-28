@@ -10,3 +10,5 @@ The most used example For testing if it functioned in development is displayed b
 ```javascript
 console.log("Hello, World!");
 ```
+
+[!NOTE] We are aware that the layout of the CLI is not professional and we don't want to be made fun of.
