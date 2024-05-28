@@ -14,4 +14,7 @@ console.log("Hello, World!");
 
 [NOTE] We are aware that the layout of the CLI is not professional and we don't want to be made fun of.
 
+
+
 ![Static Badge](https://img.shields.io/badge/Esbuild-black?style=flat-square&logo=gihub&link=https://github.com/evanw/esbuild)
+![Static Badge](https://img.shields.io/badge/Node-black?style=flat-square&logo=gihub&link=https://github.com/nodejs/node)
