@@ -5,7 +5,8 @@
 
 Leh.js is a WASM and Node.js based cli interface that uses Esbuild to parse input and function.
 
-The most used example for testing if it work in development was
+The most used example For testing if it functioned in development is displayed below.
 
 ```javascript
 console.log("Hello, World!");
+```
