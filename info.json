@@ -1,0 +1,5 @@
+{
+  "name": "Lehdeh CLI",
+  "version": "1.0",
+  "supported_runtimes": ["WASM", "Node.js"]
+}
