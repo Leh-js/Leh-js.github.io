@@ -46,3 +46,9 @@ Thank you to all contributors and resources that have helped shape Leh.js.
 ![Static Badge](https://img.shields.io/badge/Esbuild-black?style=flat-square&logo=gihub&link=https://github.com/evanw/esbuild)
 ![Static Badge](https://img.shields.io/badge/Node-black?style=flat-square&logo=gihub&link=https://github.com/nodejs/node)
 ![Static Badge](https://img.shields.io/badge/Leh.js-black?style=flat-square&logo=gihub&link=https://formernetlifyuser.neocities.org/cli)
+
+UPDATES:
+
+
+**LehOS is created**
+![Static Badge](https://img.shields.io/badge/Leh.js-black?style=flat-square&logo=gihub&link=https://leh-os.netlify.app/))
