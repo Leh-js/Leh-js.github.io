@@ -10,8 +10,9 @@ The most used example for testing if it functioned in development is displayed b
 ```javascript
 console.log("Hello, World!");
 ```
+Also you can't execute files in this so you have to type in the JavaScript directly.
 
-Also a message from the creator, you cannot install packages in this, Sorry.
+A message from the creator, you cannot install packages using npm in this, Sorry.
 
 Trying to will result in the following error:
 
