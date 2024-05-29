@@ -51,4 +51,4 @@ UPDATES:
 
 
 **LehOS is created**
-![Static Badge](https://img.shields.io/badge/Leh.js-black?style=flat-square&logo=gihub&link=https://leh-os.netlify.app/))
+![Static Badge](https://img.shields.io/badge/LehOS-black?style=flat-square&logo=gihub&link=https://leh-os.netlify.app/)
