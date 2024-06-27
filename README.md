@@ -22,7 +22,7 @@ Error executing command: Error: Transform failed with 1 error:
 ```
 ![Screenshot 2024-05-28 12 15 04 PM](https://github.com/Leh-js/leh.js/assets/164905463/2fd48abb-05aa-405d-b9c6-da1b47eba1a7)
 
-[NOTE] We are aware that the layout of the CLI is not professional and we don't want to be made fun of.
+> **NOTE**: We are aware that the layout of the CLI is not professional and we don't want to be made fun of.
 ### Credits
 
 - **WebAssembly (WASM):**
