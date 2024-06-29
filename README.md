@@ -3,7 +3,7 @@
 ![leh.js logo](https://avatars.githubusercontent.com/u/171061506?s=200&v=4)
 
 
-Leh.js (Also called Lehdah CLI) is a web based cli interface that relies on Wasm and Node.js and uses Esbuild to parse input and function.
+Leh.js (Also called Lehdah CLI) is a web based cli interface that relies on WASM and uses Esbuild to parse input and function.
 
 The most used example for testing if it functioned in development is displayed below.
 
@@ -28,14 +28,12 @@ Error executing command: Error: Transform failed with 1 error:
 - **WebAssembly (WASM):**
   - WebAssembly is an open standard developed by the World Wide Web Consortium (W3C) with contributions from various individuals and organizations.
 
-- **Node.js Foundation:**
-  - Node.js is an open-source project created by Ryan Dahl and maintained by a vast community of developers and maintainers.
 
 - **Esbuild:**
   - Esbuild is an open-source project created and maintained by Evan Wallace.
 
 - **SVG Artwork:**
-  - SVG artwork by [klange](https://github.com/klange).
+  - SVG artwork by @klange
 
 - **Leh.js (Lehdeh CLI):**
   - Leh.js is a one-person project, and the creator prefers to remain anonymous.
