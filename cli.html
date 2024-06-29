@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leh.js</title>
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="https://avatars.githubusercontent.com/u/171061506?s=200&v=4">
+  
+  <style>
+    /* Terminal-like styling */
+    body {
+      font-family: monospace;
+      background-color: #000;
+      color: #fff;
+      padding: 20px;
+    }
+    h1 {
+      color: #00ffae;
+    }
+    form {
+      display: flex;
+    }
+    input[type="text"] {
+      background-color: #2e2e2e;
+      color: #fff;
+      border: none;
+      padding: 8px;
+      font-family: monospace;
+      font-size: 14px;
+      flex-grow: 1;
+    }
+    button {
+      background-color: #00ffae;
+      color: #2e2e2e;
+      border: none;
+      padding: 8px 16px;
+      font-family: monospace;
+      font-size: 14px;
+      cursor: pointer;
+    }
+    pre {
+      background-color: #000;
+      padding: 20px;
+      white-space: pre-wrap;
+    }
+  </style>
+</head>
+<body>
+  <h1>Leh.js (Lehdeh CLI, Version 1.0, WASM, Node.js)</h1>
+  <form id="form">
+    <input type="text" id="input" placeholder="Enter command" />
+    <button type="submit">Submit</button>
+  </form>
+  <div id="output"></div>
+
+  <!-- esbuild WebAssembly file -->
+  <script src="https://unpkg.com/esbuild-wasm"></script>
+
+  <script>
+    // Boolean flag to keep track of esbuild initialization
+    let esbuildInitialized = false;
+
+    // Function to initialize esbuild
+    async function initializeEsbuild() {
+      try {
+        await esbuild.initialize({
+          wasmURL: 'https://unpkg.com/esbuild-wasm/esbuild.wasm'
+        });
+        console.log('esbuild initialized successfully');
+        esbuildInitialized = true;
+      } catch (error) {
+        console.error('Error initializing esbuild:', error);
+      }
+    }
+
+    // Initialize esbuild
+    initializeEsbuild();
+
+    document.getElementById('form').addEventListener('submit', async (e) => {
+      e.preventDefault();
+      const input = document.getElementById('input').value;
+      const outputContainer = document.getElementById('output');
+
+      // Wait until esbuild is initialized
+      while (!esbuildInitialized) {
+        await new Promise(resolve => setTimeout(resolve, 100)); // Wait for 100 milliseconds
+      }
+
+      try {
+        // Capture console output
+        let consoleOutput = [];
+        const originalConsoleLog = console.log;
+        console.log = (message) => {
+          consoleOutput.push(message);
+        };
+
+        // Transpile the input code asynchronously
+        const result = await esbuild.transform(input, {
+          loader: 'js',
+          target: 'esnext',
+        });
+
+        // Evaluate the transpiled code
+        const { code } = result;
+        eval(code);
+
+        // Display output
+        const outputHTML = consoleOutput.map(msg => `<pre>${msg}</pre>`).join('');
+        outputContainer.innerHTML += `<pre>$ ${input}</pre>${outputHTML}`;
+      } catch (error) {
+        console.error('Error executing command:', error);
+        outputContainer.innerHTML += `<pre style="color: red;">Error executing command: ${error}</pre>`;
+      }
+
+      // Clear input field after submission
+      document.getElementById('input').value = '';
+    });
+  </script>
+</body>
+</html>
